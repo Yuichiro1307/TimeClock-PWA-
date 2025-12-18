@@ -1,0 +1,132 @@
+/* ========= リセット ========= */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Roboto, "Noto Sans JP", sans-serif;
+  background: #121212;
+  color: #ffffff;
+}
+
+/* ========= ヘッダー ========= */
+header {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+/* ========= メイン ========= */
+main {
+  padding: 16px;
+  padding-bottom: 88px; /* ナビ分 */
+}
+
+/* ========= ページ切り替え ========= */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ========= 見出し ========= */
+h2 {
+  margin: 0 0 16px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* ========= ボタン ========= */
+button {
+  font-size: 14px;
+  color: #ffffff;
+  background: #1e1e1e;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+button:active {
+  background: #2a2a2a;
+}
+
+/* ========= 入力 ========= */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #1e1e1e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* ========= FAB（＋ボタン） ========= */
+#addAlarm {
+  position: fixed;
+  right: 16px;
+  bottom: 88px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: #000;
+  font-size: 32px;
+  line-height: 0;
+}
+
+/* ========= キャンセルボタン ========= */
+#cancelAlarm,
+#cancelTimer {
+  background: #b00020;
+  margin-top: 12px;
+}
+
+/* ========= 下部ナビ ========= */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  background: #1a1a1a;
+  border-top: 1px solid #222;
+}
+
+nav button {
+  flex: 1;
+  background: none;
+  border-radius: 0;
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+nav button:active {
+  background: #2a2a2a;
+}
+
+/* ========= アクティブタブ ========= */
+nav button.active {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+/* ========= レスポンシブ ========= */
+@media (min-width: 600px) {
+  main {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

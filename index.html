@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Clock</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>時計</header>
+
+<main>
+  <!-- アラーム -->
+  <section id="alarmPage" class="page active">
+    <h2>アラーム</h2>
+    <button id="addAlarm">＋</button>
+    <button id="cancelAlarm">キャンセル</button>
+  </section>
+
+  <!-- タイマー -->
+  <section id="timerPage" class="page">
+    <h2>タイマー</h2>
+    <input id="timerSec" type="number" placeholder="秒">
+    <button id="startTimer">開始</button>
+    <button id="cancelTimer">キャンセル</button>
+  </section>
+</main>
+
+<nav>
+  <button data-page="alarmPage">Alarm</button>
+  <button data-page="timerPage">Timer</button>
+</nav>
+
+<!-- 音声 -->
+<audio id="alarmSound" src="sounds/ALARM.mp3" loop></audio>
+<audio id="timerSound" src="sounds/Timer.mp3" loop></audio>
+
+<!-- JS -->
+<script src="sound.js"></script>
+<script src="notification.js"></script>
+<script src="timer.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
